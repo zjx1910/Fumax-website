@@ -1852,3 +1852,89 @@ object { max-width: 100%; }
 .footer-widgets .widget {
   flex: 1;
 }
+
+/* 修改导航栏样式 */
+.site-header {
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  .site-header {
+    height: 10vh;
+  }
+}
+
+.site-navigation ul {
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
+
+.site-navigation ul li {
+  flex: 1;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+}
+
+.site-navigation ul li a {
+  font-size: 1.2em;
+  text-transform: capitalize;
+  padding: 0 10px;
+  color: #333;
+}
+
+.site-navigation ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 0;
+  z-index: 1;
+  display: none;
+  margin: 0;
+}
+
+.site-navigation ul ul li {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #ddd;
+}
+
+.site-navigation ul ul li a {
+  font-size: 1em;
+  text-transform: capitalize;
+  color: #666;
+  padding: 10px;
+}
+
+.site-navigation ul ul li:hover > a {
+  background-color: #eee;
+}
+
+.site-navigation ul li:hover > ul {
+  display: block;
+}
+
+/* 仅首字母大写的字体 */
+.site-navigation a {
+  text-transform: capitalize;
+}
+
+/* 调整子菜单项间距 */
+.site-navigation ul ul li {
+  padding: 5px 0;
+}
